@@ -1,0 +1,1 @@
+import{defineCheck as a}from"../define.js";import{diffSnapshots as n}from"./compare.js";export default a({id:"worker_vs_main",group:"cross",level:5,gate:"probe",explain:"",async run(r){const[e,o]=await Promise.all([r.main(),r.worker()]),i=n(e,o);return{fired:i.length>0,raw:{diffs:i,main:e,worker:o}}}});

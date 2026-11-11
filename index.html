@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пост антифрода · antifraud lab</title>
+  <meta name="description" content="Пост антифрода: 7 постов проверки, бот ты или человек и не обходишь ли проверки." />
+  <meta name="theme-color" content="#262a57" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g transform='rotate(-12 50 50)' fill='none' stroke='%23e5484d' stroke-width='7'><rect x='12' y='26' width='76' height='48' rx='6'/><path d='M28 50h44'/></g></svg>" />
+  <!-- тема и язык до первой отрисовки, чтобы не мигало: тёмная по умолчанию -->
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('theme') === 'light' ? 'light' : 'dark'; } catch { document.documentElement.dataset.theme = 'dark'; }</script>
+  <link rel="stylesheet" href="./src/ui/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div>
+        <h1><span id="brand-title">Пост антифрода</span> <span class="muted">· antifraud lab</span></h1>
+        <div class="sub" id="target-line">цель: —</div>
+      </div>
+      <span class="build" id="build">—</span>
+    </div>
+    <div class="controls">
+      <div class="progress"><span class="spinner" id="spinner"></span><span id="progress">—</span></div>
+      <button class="btn" id="btn-geo" type="button" title="Запросить Geolocation API и сравнить с IP (пост 6)">Геолокация</button>
+      <button class="btn" id="btn-theme" type="button" aria-pressed="false">Дневной пост</button>
+      <button class="btn" id="btn-sound" type="button" title="Звук: всё → без музыки → выключен">Звук: вкл</button>
+      <button class="btn" id="btn-lang" type="button">EN</button>
+      <button class="btn" id="btn-restart" type="button">Пройти заново</button>
+    </div>
+  </header>
+
+  <main class="flow">
+    <nav class="rail" id="rail" aria-label="Уровни"></nav>
+    <section class="stage card" id="stage"></section>
+  </main>
+
+  <footer>
+    <a href="https://boraws.com" target="_blank" rel="noopener noreferrer">made by bo</a>
+  </footer>
+
+  <script type="module" src="./src/ui/app.js"></script>
+</body>
+</html>

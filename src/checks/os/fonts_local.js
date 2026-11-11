@@ -1,0 +1,1 @@
+import{defineCheck as o}from"../define.js";export default o({id:"fonts_local",group:"os",explain:"",async run(n){const e=await n.fonts();return{fired:e.regional.length>0,raw:{osGuess:e.osGuess,regional:e.regional,present:e.present,checked:e.checked}}}});

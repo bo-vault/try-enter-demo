@@ -1,0 +1,1 @@
+import{defineCheck as n}from"../define.js";import{typingVerdict as i}from"./typing_robotic.js";export default n({id:"typing_natural",group:"human",level:3,reactive:!0,explain:"",async run(t){const e=t.human.typingStats(),r=i(e);return r?{fired:!r.robotic,raw:{keys:e.keys,meanMs:e.meanMs,cv:e.cv}}:{fired:null,raw:{keys:e.keys}}}});

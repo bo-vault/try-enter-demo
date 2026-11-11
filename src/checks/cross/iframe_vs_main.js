@@ -1,0 +1,1 @@
+import{defineCheck as f}from"../define.js";import{diffSnapshots as m}from"./compare.js";export default f({id:"iframe_vs_main",group:"cross",level:5,gate:"probe",explain:"",async run(e){const[r,i]=await Promise.all([e.main(),e.iframe()]),a=m(r,i);return{fired:a.length>0,raw:{diffs:a,main:r,iframe:i}}}});

@@ -1,0 +1,1 @@
+import{defineCheck as p}from"../define.js";export default p({id:"apple_relay",group:"db",explain:"",async run(e){const a=await e.ipapi(),n=[a.company,a.asnOrg,a.flags?.vpnService].filter(Boolean).join(" | ");return{fired:/apple|icloud|private relay/i.test(n),raw:{company:a.company,asn:a.asn}}}});

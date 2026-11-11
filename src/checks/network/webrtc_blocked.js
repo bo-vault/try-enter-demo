@@ -1,0 +1,1 @@
+import{defineCheck as t}from"../define.js";import{tr as n}from"../../i18n.js";export default t({id:"webrtc_blocked",group:"network",explain:"",async run(r){const e=await r.webrtc();return e.supported?{fired:e.candidates===0,raw:e}:{fired:!0,raw:{...e,note:n("RTCPeerConnection \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442","RTCPeerConnection is missing")}}}});
